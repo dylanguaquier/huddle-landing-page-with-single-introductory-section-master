@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Poppins";
+  font-weight: 600;
+}
+
+p {
+  font-weight: 400;
+}
+
+body {
+  background-image: url("/images/bg-mobile.svg");
+  background-color: hsl(257, 40%, 49%);
+  background-repeat: no-repeat;
+  font-family: "Open Sans";
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  padding: 0em 2em 0 2em;
+  align-items: start;
+  img {
+    width: 50%;
+  }
+}
+
+.main-ctn {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+  text-align: center;
+
+  .main-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+}
+
+.register-btn {
+  border: none;
+  padding: 1em;
+  width: 70%;
+  align-self: center;
+  border-radius: 2em;
+  color: hsl(257, 40%, 49%);
+  box-shadow: 2px 2px 18px 2px rgba(0, 0, 0, 0.36);
+}
+.register-btn:hover {
+  color: white;
+  background-color: hsl(300, 69%, 71%);
+  cursor: pointer;
+}
+
+.footer-ctn {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.fa-brands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid;
+  border-radius: 100%;
+}
+
+.fa-brands:hover {
+  color: hsl(300, 69%, 71%);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    background-image: url("/images/bg-desktop.svg");
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .wrapper {
+    max-width: 500px;
+  }
+  .main {
+    img {
+      max-width: 500px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    width: 15%;
+  }
+  .main {
+    display: flex;
+    flex-direction: row;
+    img {
+      max-width: none;
+    }
+    max-height: 100%;
+  }
+  .main-text {
+    padding: 2em;
+    text-align: left;
+  }
+  .register-btn {
+    align-self: baseline;
+    width: 30%;
+  }
+  .wrapper {
+    max-width: 1440px;
+  }
+  .footer-ctn {
+    padding-right: 2em;
+    justify-content: end;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  h1 {
+    font-size: 2.9em;
+  }
+}
